@@ -1,0 +1,11 @@
+version: "2"
+services:
+  ionic-app:
+    container_name: ionic-app
+    volumes: 
+      - .:/app
+    ports: 
+      - 8100:8100
+      - 35279:35279
+    build: . 
+    tty: true
