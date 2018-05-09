@@ -7,7 +7,9 @@ WORKDIR /app
 # Copy package.json into container app folder
 COPY package.json package-lock.json* ./
 
-RUN npm i npm@latest -g && \
+RUN apt get update && \
+ apt-get install vim && \
+ npm i npm@latest -g && \
  npm update && \
  npm install -g ionic cordova && \
  npm install && \
