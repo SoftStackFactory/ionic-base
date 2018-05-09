@@ -13,10 +13,11 @@ RUN npm i npm@latest -g && \
  npm install && \
  npm cache clean --force
 
+
 COPY . ./
 
 EXPOSE 8100
 EXPOSE 35729
 
-CMD ionic serve
+
 
